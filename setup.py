@@ -10,13 +10,12 @@ setup(
         "fastapi==0.104.1",
         "uvicorn==0.24.0",
         "pydantic==2.5.0",
-        "openai==1.6.1",
-        "requests==2.31.0",
+        "openenv-core>=0.2.0",
     ],
     python_requires=">=3.10",
     entry_points={
         "console_scripts": [
-            "openenv-server=app:app",
+            "openenv-server=server.app:main",
             "openenv-inference=inference:main",
         ],
     },
