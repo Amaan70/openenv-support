@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "python app.py",
+    "inference": "python inference.py"
+  },
+  "entry_points": {
+    "server": "app:app",
+    "inference": "inference:main"
+  }
+}

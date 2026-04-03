@@ -1,0 +1,31 @@
+name: Customer Support Ticket Triage
+description: Real-world customer support ticket management for AI agents
+version: 1.0.0
+
+entry_points:
+  server: app:app
+  inference: inference:main
+
+tasks:
+  - id: support_easy
+    difficulty: easy
+    max_steps: 15
+  - id: support_medium
+    difficulty: medium
+    max_steps: 15
+  - id: support_hard
+    difficulty: hard
+    max_steps: 15
+
+observation_space:
+  ticket_summary: string
+  current_ticket: object
+  metrics: object
+
+action_space:
+  action_type: string
+  priority: integer
+  response: string
+  assign_to: string
+
+reward_range: [0.0, 1.0]
